@@ -41,6 +41,6 @@ name = input("Hello, what is your name? ")
 mnth = input("Hi " + name + ", what was the name of the month you were born in? ")
 year = input("And what year were you born in, " + name + "? ")
 day = input("And the day? ")
-mnth = datetime.today().month
-if mnth == :
+mnth2 = datetime.today().month
+if mnth2 == 10:
     print("You were born on Halloween!")
