@@ -38,9 +38,31 @@ todaydate = datetime.today().day
 month = month_name[todaymonth]
 
 name = input("Hello, what is your name? ")
-mnth = input("Hi " + name + ", what was the name of the month you were born in? ")
-year = input("And what year were you born in, " + name + "? ")
-day = input("And the day? ")
-mnth2 = datetime.today().month
-if mnth2 == 10:
+mnth = (input("Hi " + name + ", what was the name of the month you were born in? "))
+year = float(input("And what year were you born in, " + name + "? "))
+day = float(input("And the day? "))
+
+if mnth == "October" or mnth == "September" or mnth == "November":
+    season = "fall"
+elif mnth == "August" or mnth == "June" or mnth == "July":
+    season = "summer"
+elif mnth == "March" or mnth == "April" or mnth == "May":
+    season = "spring"
+else:
+    season = "winter"
+    
+if year >= 2000:
+    era = "two thousands"
+elif year < 2000 and year >= 1990:
+    era = "nineties"
+elif year < 1990 and year >= 1980:
+    era = "eighties"
+else:
+    era = "Stone age"
+
+if mnth == "October" and day == 31:
     print("You were born on Halloween!")
+elif mnth == month and todaydate == day:
+    print("Happy birthday!")
+else:
+    print(name + ", you are a " + season + " baby of the " + era + ".")
